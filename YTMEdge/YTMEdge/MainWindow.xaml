@@ -1,0 +1,26 @@
+﻿<Controls:MetroWindow x:Class="YTMEdge.MainWindow"
+					  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+					  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+					  xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+					  xmlns:WPF="clr-namespace:Microsoft.Toolkit.Win32.UI.Controls.WPF;assembly=Microsoft.Toolkit.Win32.UI.Controls"
+					  xmlns:local="clr-namespace:YTMEdge"
+					  mc:Ignorable="d"
+					  Title="YouTube Music" Height="650" Width="1200"
+					  Closing="MetroWindow_Closing">
+	<Grid>
+		<WPF:WebView x:Name="YTWebView"
+					 IsIndexedDBEnabled="True"
+					 IsJavaScriptEnabled="True"
+					 IsPrivateNetworkClientServerCapabilityEnabled="True"
+					 IsScriptNotifyAllowed="True"
+					 Source="about:blank"
+					 ScriptNotify="YTWebView_ScriptNotify"
+					 NavigationCompleted="YTWebView_NavigationCompleted"
+					 PermissionRequested="YTWebView_PermissionRequested"
+					 DOMContentLoaded="YTWebView_DOMContentLoaded"
+					 Margin="0,0,0,0"/>
+
+	</Grid>
+</Controls:MetroWindow>
